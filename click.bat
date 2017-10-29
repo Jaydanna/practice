@@ -1,6 +1,3 @@
 :start
-start python F:\MINE\github\click.py 
-timeout /T 60
-taskkill /f /im click.py 
-goto start
+start python F:\GitHub\practice 1.py  
 
