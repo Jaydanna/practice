@@ -8,8 +8,15 @@ import os
 ls = os.linesep
 fname = raw_input('input:')
 #get filename
+# while True:
+# 	if os.path.exists(fname):
+# 		print "ERROR:'%s' already exits" % fname
+# 	else:
+# 		break
 while True:
-	if os.path.exists(fname):
+	try:
+		fname = raw_input('input:')
+	except IOError,e:
 		print "ERROR:'%s' already exits" % fname
 	else:
 		break
