@@ -1,5 +1,6 @@
 #!usr/bin/env python
 import string
+import keyword
 
 alphas = string.letters + '_'
 nums = string.digits
@@ -20,5 +21,5 @@ if len(myInput) > 1:
 				print '''invalid: remaining
 				symbols must be alphanumeric'''
 				break
-			else:
+			elif otherChar in keyword.kwlist:
 				print "okay as an identifier"
