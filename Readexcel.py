@@ -2,8 +2,9 @@
 # author:Jaydan
 
 import xdrlib
-import xlrd,sys,xlwt
-from xlutils.copy import copy
+import xlrd,sys
+#import xlwt
+# from xlutils.copy import copy
 
 # file = r'..\\practice\DATA\Test.xlsx'
 

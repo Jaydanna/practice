@@ -42,8 +42,8 @@ class CheckUid(unittest.TestCase):
         uidselector.send_keys('MYMPBHTB2X96DPBR111A')
         driver.find_element_by_name('connect').click()
         sleep(5)
-        a = driver.find_elements_by_xpath("/html/body/p[2]/text()").text
-        # a = driver.find_elements_by_xpath("/html/body/p[2]/text()")
+        # a = driver.find_elements_by_css_selector("css= br + br")
+        a = driver.find_elements_by_xpath("/html/body").get_attribute('p')
         print a
 
         if 'IOTC_Connect(): FAIL(-90)' in a:
