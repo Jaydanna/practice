@@ -7,7 +7,7 @@ import unittest
 from Readexcel import read_excel
 from time import sleep
 
-file = r'F:\GitHub\practice\DATA\Test.xlsx'
+file = r'..\\practice\DATA\UID.xlsx'
 
 class CheckUid(unittest.TestCase):
 
@@ -19,15 +19,41 @@ class CheckUid(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
 
-    def test_UID(self):
+    # def test_UID(self):
+    #     driver = self.driver
+    #     driver.get(self.base_url)
+    #     driver.find_element_by_name("uid").clear()
+    #     num = read_excel(file, 3)
+    #     for i in range(len(num)):
+    #         uidselector = driver.find_element_by_name("uid")
+    #         if uidselector == '':
+    #             data = num[1]
+    #             uidselector.send_keys(data)
+    #             driver.find_element_by_name('connect').click()
+    #             sleep(5)
+    #             a = driver.find_element_by_xpath("/html/body/p[2]/text()[3]")
+    #             print i,a
+    def testfoeme(self):
         driver = self.driver
         driver.get(self.base_url)
-        driver.find_element_by_name("uid").clear()
-        for i in
-        data = read_excel(file,0,0,0)[0]
-        driver.find_element_by_name("uid").send_keys(data)
-        sleep(4)
+        num = read_excel(file, 3)
+        uidselector = driver.find_element_by_name("uid")
+        data = num[1]
+        uidselector.send_keys('MYMPBHTB2X96DPBR111A')
         driver.find_element_by_name('connect').click()
+        sleep(5)
+        a = driver.find_elements_by_xpath("/html/body/p[2]/text()").text
+        # a = driver.find_elements_by_xpath("/html/body/p[2]/text()")
+        print a
+
+        if 'IOTC_Connect(): FAIL(-90)' in a:
+            print 'right!'
+        elif '11SGERZ8DJZTFP7W111A' in a:
+            raise RuntimeError('is active!')
+        else:
+            raise NameError('input file name error !')
+
+
 
 if __name__ == "__main__":
     unittest.main()

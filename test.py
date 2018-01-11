@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-
+'''  '''
 def product(x,y):
 	'''Returns the product of a two number'''
 	return x*y
@@ -27,7 +27,7 @@ def year(num):
 		return "is noleap year!"
 
 
-
-
 if __name__ == '__main__':
-	print year(90)
+	s = int(raw_input(12))
+	print s
+	print year(s)

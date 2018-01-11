@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://E:/ysx/Test/第四期/UIDchoujian/Minesweepers/Jaydan/.idea/Jaydan.iml" filepath="E:/ysx/Test/第四期/UIDchoujian/Minesweepers/Jaydan/.idea/Jaydan.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Jaydan/.idea/Jaydan.iml" filepath="$PROJECT_DIR$/../Jaydan/.idea/Jaydan.iml" />
+      <module fileurl="file://E:/ysx/Test/第四期/UIDchoujian/Minesweepers/Wangming/.idea/Wangming.iml" filepath="E:/ysx/Test/第四期/UIDchoujian/Minesweepers/Wangming/.idea/Wangming.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/github.iml" filepath="$PROJECT_DIR$/.idea/github.iml" />
     </modules>
   </component>
